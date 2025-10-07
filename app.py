@@ -5,16 +5,18 @@ from chatbot_functions import DataProcessor, Chatbot
 data_processor = DataProcessor()  # loads cleaned_medquad.csv
 chatbot = Chatbot(data_processor)
 
-# Gradio function
-def chat_with_backend(message):
+def chat_with_backend(message, history=None):
     if not message.strip():
         return "Please enter a question."
     
-    best_question, response, source = chatbot.get_response(message)
-    if best_question == "UNKNOWN":
-        return response
-    else:
-        return f"Matched question: {best_question}\nAnswer: {response}\nSource: {source}"
+    try:
+        best_question, response, source = chatbot.get_response(message)
+        if best_question == "UNKNOWN":
+            return response
+        else:
+            return f"Matched question: {best_question}\nAnswer: {response}\nSource: {source}"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 # Gradio interface
 iface = gr.ChatInterface(
@@ -25,3 +27,4 @@ iface = gr.ChatInterface(
 
 if __name__ == "__main__":
     iface.launch(server_name="0.0.0.0", server_port=7860, debug=True)
+
