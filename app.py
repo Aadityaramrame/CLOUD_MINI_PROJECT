@@ -1,5 +1,5 @@
 import gradio as gr
-from chatbot_function import DataProcessor, Chatbot
+from chatbot_functions import DataProcessor, Chatbot
 
 # Initialize data and chatbot
 data_processor = DataProcessor()  # loads cleaned_medquad.csv
