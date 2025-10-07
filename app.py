@@ -1,7 +1,7 @@
 import gradio as gr
 import requests
 
-API_URL = "https://carecompanion-chatbotpython-chatbot-app.onrender.com/chatbot"
+API_URL = "https://carecompanion-chatbotpython-chatbot-app.onrender.com/chat"
 
 def chat_with_backend(message):
     try:
