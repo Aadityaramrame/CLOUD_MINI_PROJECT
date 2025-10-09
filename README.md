@@ -84,9 +84,11 @@ Reason: EC2 was sufficient for this scale and provided better control over depen
 All AWS resources (EC2, IAM, and S3) have been safely terminated after deployment testing to prevent unnecessary billing.
 
 👨‍💻 Author
+
 Aaditya Arvind Ramrame
 
 Cloud and Machine Learning Enthusiast
+
 📧 aadityaramrame@gmail.com
 
 🔗 https://github.com/Aadityaramrame
