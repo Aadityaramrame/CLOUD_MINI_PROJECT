@@ -21,6 +21,7 @@ Purpose:
 Alternative (Not Implemented):
 
 1.AWS Secrets Manager for automatic credential rotation.
+
 Reason: Not necessary for small-scale academic deployment and would increase complexity and cost.
 
 🗃️ 2. Amazon S3 (Simple Storage Service)
@@ -36,6 +37,7 @@ Purpose:
 Alternative (Not Implemented):
 
 1. Direct programmatic access using Boto3 SDK to read from S3 within the EC2 app.
+   
 Reason: For demonstration purposes, manual upload was sufficient, and integration was skipped to focus on showcasing AWS services setup.
 
 💻 3. Amazon EC2 (Elastic Compute Cloud)
@@ -49,6 +51,7 @@ Purpose:
 
 Alternative (Not Implemented):
 1. AWS Lambda or AWS SageMaker for serverless or managed ML hosting.
+   
 Reason: EC2 was sufficient for this scale and provided better control over dependencies.
 
 🚀 Deployment Flow
